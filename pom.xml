@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<parent>
 		<groupId>org.mule.examples</groupId>
 		<artifactId>examples-catalog</artifactId>
@@ -31,6 +33,18 @@
 				<extensions>true</extensions>
 				<configuration>
 					<classifier>mule-application</classifier>
+					<cloudHubDeployment>
+						<muleVersion>4.3.0</muleVersion>
+						<username>${env.PLATFORM_USERNAME}</username>
+						<password>${env.PLATFORM_PASSWORD}</password>
+						<applicationName>hello-world-dev-apdec21</applicationName>
+						<environment>Sandbox</environment>
+						<workers>1</workers>
+						<workerType>MICRO</workerType>
+						<objectStoreV2>true</objectStoreV2>
+						<region>us-east-2</region>
+						<businessGroupId>${env.BUS_GROUP_ID}</businessGroupId>
+					</cloudHubDeployment>
 				</configuration>
 			</plugin>
 			<plugin>
