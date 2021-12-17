@@ -14,7 +14,7 @@
 	<name>hello-world</name>
 
 	<properties>
-		<munit.version>2.1.2</munit.version>
+		<munit.version>2.3.0</munit.version>
 		<mule.maven.plugin.version>3.5.2</mule.maven.plugin.version>
 	</properties>
 
